@@ -90,6 +90,8 @@ useradd -r -g %{daemon_group} -s /sbin/nologin -d %{_sharedstatedir}/bitcoind %{
 %{_datarootdir}/bash-completion/completions/bitcoin-tx
 
 %files daemon
+%dir %{_sysconfdir}/bitcoin
+%dir %{_sharedstatedir}/bitcoind
 %{_bindir}/bitcoind
 %{_unitdir}/bitcoind.service
 %{_mandir}/man1/bitcoind.1.gz
