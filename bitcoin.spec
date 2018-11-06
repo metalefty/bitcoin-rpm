@@ -66,7 +66,7 @@ cp -v %{_builddir}/bitcoin-%{version}/contrib/init/bitcoind.service %{buildroot}
 
 %pre daemon
 groupadd %{daemon_group}
-useradd -r -g %{daemon_group} -s /sbin/nologin -d %{_sharedstatedir}/bitcoind %{daemon_group}
+useradd -r -g %{daemon_group} -s /sbin/nologin -d %{_sharedstatedir}/bitcoind %{daemon_user}
 %systemd_post bitcoind.service
 
 %postun daemon
