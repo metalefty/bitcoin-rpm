@@ -16,3 +16,4 @@ yum install -y $(grep BuildRequires bitcoin.spec | sed -e 's/BuildRequires://')
 $SUDO rpmdev-setuptree
 $SUDO wget -P ~btcbuild/rpmbuild/SOURCES https://bitcoincore.org/bin/bitcoin-core-${BITCOIN_VERSION}/bitcoin-${BITCOIN_VERSION}.tar.gz
 $SUDO rpmbuild -ba /btcbuild/bitcoin.spec
+$SUDO cp -r ~btcbuild/rpmbuild .
